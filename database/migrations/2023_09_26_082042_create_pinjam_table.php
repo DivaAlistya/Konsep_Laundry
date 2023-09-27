@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('pinjam', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_buku');
-            $table->string('title', 100);
-            $table->date('tanggal_pinjam');
-            $table->date('tanggal_kembali');
+            $table->integer('id_us')->index();
+            $table->integer('id_bu')->index();
+            $table->string('name')->index();
+            $table->string('judul')->index();
+            $table->string('mobile')->index();
+            $table->date('tgl_kembali');
             $table->timestamps();
         });
     }

@@ -14,12 +14,9 @@ class BukuSeeder extends Seeder
     public function run(): void
     {
         $buku = new Buku();
-        $buku->id = '2';
-        $buku->title = 'Pemrograman web';
-        $buku->penerbit = 'Hafiz';
-        $buku->tahun_terbit = '2017';
+        $buku->pengarang = '';
+        $buku->judul = '';
+        $buku->thn_terbit = '';
         $buku->save();
-
-        $buku2 = new Buku();
     }
 }

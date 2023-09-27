@@ -12,9 +12,13 @@ class Buku extends Model
     protected $table = 'buku';
 
     protected $fillable = [
-        'judul',
         'pengarang',
-        'tahun_terbit',
+        'judul',
+        'thn_terbit',
     ];
+
+    public function Users() {
+        return $this->belongsTo(Users::class, 'judul', 'id_bu');
+    }
 
 }

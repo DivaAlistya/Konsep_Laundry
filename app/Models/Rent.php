@@ -12,11 +12,10 @@ class Rent extends Model
     protected $table = 'pinjam';
 
     protected $fillable = [
-        'id_user',
-        'id_buku',
-        'tanggal_pinjam',
-        'tanggal_kembali',
-        'returned',
+        'name',
+        'judul',
+        'mobile',
+        'tgl_kembali',
     ];
 
     // Definisikan relasi antara User dan Pinjam
