@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Users extends Model
+class Pengguna extends Model
 {
     use HasFactory;
 
-    protected $table = 'user';
+    protected $table = 'pengguna';
 
     protected $fillable = [
         'name',
         'mobile',
     ];
 
-    public function Buku() {
-        return $this->hasMany(Buku::class, 'judul', 'id_bu');
+    public function Book() {
+        return $this->hasMany(Book::class, 'title', 'id_book');
     }
 }

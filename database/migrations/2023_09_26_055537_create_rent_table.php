@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('rent', function (Blueprint $table) {
             $table->id();
             $table->BigInteger('id_user');
-            $table->BigInteger('id_buku');
+            $table->BigInteger('id_book');
             $table->string('title', 100);
             $table->date('tanggal_pinjam');
-            $table->date('tanggal_kembali');
+            $table->date('return_date');
             $table->timestamps();
         });
     }

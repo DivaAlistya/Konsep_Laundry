@@ -2,20 +2,20 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Pengguna;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class UserSeeder extends Seeder
+class PenggunaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $user = new User();
-        $user->name = '';
-        $user->moblie = '';
-        $user->save();
+        $pengguna = new Pengguna();
+        $pengguna->name = 'safa';
+        $pengguna->mobile = '0888';
+        $pengguna->save();
     }
 }

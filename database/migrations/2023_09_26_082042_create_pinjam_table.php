@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('pinjam', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_us')->index();
-            $table->integer('id_bu')->index();
+            $table->integer('id_user')->index();
+            $table->integer('id_book')->index();
             $table->string('name')->index();
-            $table->string('judul')->index();
+            $table->string('title')->index();
             $table->string('mobile')->index();
-            $table->date('tgl_kembali');
+            $table->date('return_date');
             $table->timestamps();
         });
     }

@@ -13,24 +13,20 @@ class Rent extends Model
 
     protected $fillable = [
         'name',
-        'judul',
+        'title',
         'mobile',
-        'tgl_kembali',
+        'year_publ',
     ];
 
     // Definisikan relasi antara User dan Pinjam
-    public function user()
+    public function pengguna()
     {
-        return $this->belongsTo(User::class, 'id_user');
+        return $this->belongsTo(Pengguna::class, 'id_user');
     }
 
     // Definisikan relasi antara Buku dan Pinjam
-    public function buku()
+    public function book()
     {
-        return $this->belongsTo(Buku::class, 'id_buku');
+        return $this->belongsTo(Book::class, 'id_book');
     }
 }
-
-
-
-
