@@ -9,7 +9,7 @@ class Rent extends Model
 {
     use HasFactory;
 
-    protected $table = 'pinjam';
+    protected $table = 'rents';
 
     protected $fillable = [
         'name',

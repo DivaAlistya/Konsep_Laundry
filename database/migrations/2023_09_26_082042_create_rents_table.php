@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rent', function (Blueprint $table) {
+        Schema::create('rents', function (Blueprint $table) {
             $table->id();
-            $table->BigInteger('id_user');
-            $table->BigInteger('id_book');
-            $table->string('title', 100);
-            $table->date('tanggal_pinjam');
+            $table->integer('id_user')->index();
+            $table->integer('id_book')->index();
+            $table->string('name')->index();
+            $table->string('title')->index();
+            $table->string('mobile')->index();
             $table->date('return_date');
             $table->timestamps();
         });
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rent');
+        Schema::dropIfExists('pinjam');
     }
 };
