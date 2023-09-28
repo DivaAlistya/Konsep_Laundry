@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rents', function (Blueprint $table) {
+        Schema::create('loan', function (Blueprint $table) {
             $table->id();
             $table->integer('id_user')->index();
             $table->integer('id_book')->index();
