@@ -16,7 +16,7 @@ class StafSeeder extends Seeder
         $staf = new Staf();
         $staf->id_staf = '001';
         $staf->staf_name = 'safa';
-        $staf->mobile = '0888';
+        $staf->phone_number = '0888';
         $staf->save();
     }
 }
