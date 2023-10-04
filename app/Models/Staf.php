@@ -13,7 +13,6 @@ class Staf extends Model
 
     protected $fillable = [
         'staf_name',
-        'phone_number',
     ];
 
     public function Customers() {
